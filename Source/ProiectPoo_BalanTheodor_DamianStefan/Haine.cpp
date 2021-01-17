@@ -131,6 +131,7 @@ Produs Produs::operator-=(int x) {
 	return *this;
 }
 */
+
 //destructor
 Haine::~Haine()
 {

@@ -44,8 +44,8 @@ public:
 	
 	//operatori
 	void operator=(Haine p);
-	Haine operator+=(int x);
-	virtual Haine operator-=(int x);
+	/*Haine operator+=(int x);
+	virtual Haine operator-=(int x);*/
 
 	~Haine();
 };

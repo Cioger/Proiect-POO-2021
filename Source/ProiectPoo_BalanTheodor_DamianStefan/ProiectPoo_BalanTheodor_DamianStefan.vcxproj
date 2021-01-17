@@ -139,12 +139,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Admin.cpp" />
-    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Bermude.cpp" />
+    <ClCompile Include="Bluza.cpp" />
     <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="Ghiozdan.cpp" />
     <ClCompile Include="HaineBarbati.cpp" />
     <ClCompile Include="HaineFemei.cpp" />
     <ClCompile Include="InterfataHaine.cpp" />
     <ClCompile Include="InterfataUser.cpp" />
+    <ClCompile Include="Rochie.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Haine.cpp" />
     <ClCompile Include="User.cpp" />
@@ -152,13 +155,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Admin.h" />
-    <ClInclude Include="Client.h" />
+    <ClInclude Include="Bermude.h" />
+    <ClInclude Include="Bluza.h" />
     <ClInclude Include="Controller.h" />
+    <ClInclude Include="Ghiozdan.h" />
     <ClInclude Include="HaineBarbati.h" />
     <ClInclude Include="HaineFemei.h" />
     <ClInclude Include="InterfataHaine.h" />
     <ClInclude Include="Haine.h" />
     <ClInclude Include="InterfataUser.h" />
+    <ClInclude Include="Rochie.h" />
     <ClInclude Include="User.h" />
     <ClInclude Include="View.h" />
   </ItemGroup>
