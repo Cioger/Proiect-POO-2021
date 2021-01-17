@@ -17,13 +17,13 @@ Haine::Haine(int id, string descriere, float pret, string firma, bool inStoc, Ma
 	if (id == 0) {
 		throw new exception("id incomplet");
 	}
-	else if (this->descriere == "") {
+	else if (descriere == "") {
 		throw new exception("descriere incompleta");
 	}
-	else if (this->pret==0) {
+	else if (pret==0) {
 		throw new exception("pret indisponibil");
 	}
-	else if (this->firma=="") {
+	else if (firma=="") {
 		throw new exception("firma indisponibil");
 	}
 	else {
@@ -112,25 +112,41 @@ void Haine::setMarime(Marime marime) {
 }
 
 //operator +=
-/*Produs Produs::operator+=(int x) {
-	pret += x;
+Haine Haine::operator+=(int bt) {
+	pret += bt;
 	return *this;
 }
-*/
+
+Haine Haine::operator-=(int ds) {
+	pret -= ds;
+	return *this;
+}
 
 string Haine::Afisare() {
 	return "Haine\n";
 }
 
 void Haine::updateTot() {
+	int i;
+	string s;
+	float f;
 
+	cout << endl << "Noul id: ";
+	cin >> i;
+	setId(i);
+	cout << endl << "Noua descriere: ";
+	cin >> s;
+	setDescriere(s);
+	cout << endl << "Noul pret:";
+	cin >> f;
+	setPret(f);
+	cout << endl << "Noua firma: ";
+	cin >> s;
+	setFirma(s);
 }
 
-/*
-Produs Produs::operator-=(int x) {
-	return *this;
-}
-*/
+
+
 
 //destructor
 Haine::~Haine()

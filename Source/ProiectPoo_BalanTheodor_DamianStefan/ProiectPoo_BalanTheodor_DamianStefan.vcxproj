@@ -145,8 +145,6 @@
     <ClCompile Include="Ghiozdan.cpp" />
     <ClCompile Include="HaineBarbati.cpp" />
     <ClCompile Include="HaineFemei.cpp" />
-    <ClCompile Include="InterfataHaine.cpp" />
-    <ClCompile Include="InterfataUser.cpp" />
     <ClCompile Include="Rochie.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Haine.cpp" />
@@ -161,9 +159,7 @@
     <ClInclude Include="Ghiozdan.h" />
     <ClInclude Include="HaineBarbati.h" />
     <ClInclude Include="HaineFemei.h" />
-    <ClInclude Include="InterfataHaine.h" />
     <ClInclude Include="Haine.h" />
-    <ClInclude Include="InterfataUser.h" />
     <ClInclude Include="Rochie.h" />
     <ClInclude Include="User.h" />
     <ClInclude Include="View.h" />

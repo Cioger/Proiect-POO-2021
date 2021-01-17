@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Rochie.h"
 using namespace std;
 //constr
@@ -52,36 +53,37 @@ void Rochie::updateTot() {
 	int i;
 	string s;
 	float f;
-
-	cout << endl << "Noul id: ";
+	//fara spatii
+	cout << endl << "Noul id(int): ";
 	cin >> i;
 	setId(i);
-	cout << endl << "Noua descriere: ";
+	cout << endl << "Noua descriere(string): ";
 	cin >> s;
 	setDescriere(s);
-	cout << endl << "Noul pret:";
+	cout << endl << "Noul pret(float):";
 	cin >> f;
 	setPret(f);
-	cout << endl << "Noua firma: ";
+	cout << endl << "Noua firma(string): ";
 	cin >> s;
 	setFirma(s);
-	cout << endl << "Noua culoare: ";
+	cout << endl << "Noua culoare(string): ";
 	cin >> s;
 	setCuloare(s);
-	cout << endl << "Noul material: ";
+	cout << endl << "Noul material(string): ";
 	cin >> s;
 	setMaterial(s);
-	cout << endl << "Noul nr de nasturi: ";
+	cout << endl << "Noul nr de nasturi(int): ";
 	cin >> i;
 	setNasturi(i);
-	cout << endl << "Noua lungime: ";
+	cout << endl << "Noua lungime(int): ";
 	cin >> i;
 	setLungime(i);
 }
-/*
+
 string Rochie::Afisare() {
-	return "id: " + this->getId() + "Descriere: " + this->getDescriere();
-}*/
+	return "id: " + this->getId() + this->getDescriere() + "\nPret: " + to_string(this->getPret()) + "\nFirma: " + this->getFirma() + "\nculoare: " + this->getCuloare() + "\nmaterial: " + this->getMaterial() + "\nnr nasturi: " + to_string(this->getNasturi()) + "\nlungime: " + to_string(this->getLungime()) + "\nare bretele: " + (this->getBretele() ? "Da" : "Nu");
+}
+
 
 Rochie::~Rochie() {
 

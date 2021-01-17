@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "InterfataHaine.h"
 
 using namespace std;
 
@@ -9,7 +8,7 @@ enum class Marime {
 	XS, S, M, L, XL
 };
 
-class Haine : public InterfataHaine {
+class Haine {
 protected:
 
 	int id;
@@ -44,8 +43,8 @@ public:
 	
 	//operatori
 	void operator=(Haine p);
-	/*Haine operator+=(int x);
-	virtual Haine operator-=(int x);*/
+	Haine operator+=(int bt);
+	virtual Haine operator-=(int ds);
 
 	~Haine();
 };

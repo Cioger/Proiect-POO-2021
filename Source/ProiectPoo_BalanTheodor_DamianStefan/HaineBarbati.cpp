@@ -81,7 +81,7 @@ void HaineBarbati::setTaraFabricatie(string TaraFabricatie)
 
 string HaineBarbati::Afisare()
 {
-    return "HaineBarbati\n";
+    return "\nHaineBarbati\n";
 }
 //destructor
 HaineBarbati::~HaineBarbati()

@@ -48,30 +48,32 @@ void Ghiozdan::updateTot() {
 	int i;
 	string s;
 	float f;
-
-	cout << endl << "Noul id: ";
+	//fara spatii
+	cout << endl << "Noul id(int): ";
 	cin >> i;
 	setId(i);
-	cout << endl << "Noua descriere: ";
+	cout << endl << "Noua descriere(string): ";
 	cin >> s;
 	setDescriere(s);
-	cout << endl << "Noul pret:";
+	cout << endl << "Noul pret(float):";
 	cin >> f;
 	setPret(f);
-	cout << endl << "Noua firma: ";
+	cout << endl << "Noua firma(string): ";
 	cin >> s;
 	setFirma(s);
-	cout << endl << "Noul nr de buzunare: ";
+	cout << endl << "Noul nr de buzunare(int): ";
 	cin >> i;
 	setNrBuzunare(i);
-	cout << endl << "Noua tara de fab: ";
+	cout << endl << "Noua tara de fab(string): ";
 	cin >> s;
 	setTaraFabricatie(s);
-	cout << endl << "Noul nr de manere: ";
+	cout << endl << "Noul nr de manere(int): ";
 	cin >> i;
 	setNrManere(i);
 }
-//string Afisare();
+string Ghiozdan::Afisare() {
+	return "id: " + this->getId() + this->getDescriere() + "\nPret: " + to_string(this->getPret()) + "\nFirma: " + this->getFirma() + "\nnr Buzunare: " + to_string(this->getNrBuzunare()) + "\nare imprimeu: " + (this->getImprimeu() ? "Da" : "Nu") + "\nTara Fabricatie: " + this->getTaraFabricatie() + "\nnr Manere: " + to_string(this->getNrManere()) + "\nare suport de apa: " + (this->getSuportApa() ? "Da" : "Nu");
+}
 //destructor
 Ghiozdan::~Ghiozdan() {
 
