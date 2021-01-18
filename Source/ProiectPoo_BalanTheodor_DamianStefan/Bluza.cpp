@@ -33,7 +33,7 @@ void Bluza::updateTot() {
 	int i;
 	string s;
 	float f;
-	//fara spatii
+	//fara spatii (crapa)
 	cout << endl << "Noul id(int): ";
 	cin >> i;
 	setId(i);

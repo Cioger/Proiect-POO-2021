@@ -146,8 +146,6 @@ void Haine::updateTot() {
 }
 
 
-
-
 //destructor
 Haine::~Haine()
 {

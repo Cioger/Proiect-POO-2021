@@ -8,9 +8,9 @@ void View::logare() {
 	cout << "Optiuni de autentificare:\n";
 	cout << "  1) Administrator\n";
 	cout << "  2) User\n";
+	cout << "---------------------------"<<endl;
 }
 
-	// user = 1admin, 2user
 void View::meniu(int user) {
 	if (user == 1) {
 		cout << "\nPanou de comanda (admin)\n";
@@ -19,8 +19,8 @@ void View::meniu(int user) {
 		cout << "2) Adauga haine in stoc\n";
 		cout << "3) Sterge haine din stoc\n";
 		cout << "4) Editeaza haine din stoc\n";
-		cout << "5) Genereaza bon\n";
-		cout << "6) Scoate bon \n";
+		cout << "5) Aplica Reducere \n";
+		cout << "6) Aplica Scumpire \n";
 	}
 	else {
 		cout << "\nActiuni disponibile:\n";
@@ -31,8 +31,9 @@ void View::meniu(int user) {
 		cout << "4) Sterge haine din cart\n";
 		cout << "5) Efectueaza comanda\n";
 	}
-	//cout << " ";
 }
+//html+css+js sunt de domeniul trecutului
+//nu te numesti programator daca nu faci front-end in c++
 
 void View::haineDeAdaugat() {
 	cout << endl << "Alege tipul de haina de adaugat:\n";
@@ -40,9 +41,11 @@ void View::haineDeAdaugat() {
 	cout << "2. Rochie\n";
 	cout << "3. Bermude\n";
 	cout << "4. Ghiozdan\n";
+	//mare diversitate de haine la noi in magazin
 }
 
 void View::toateHainele(vector<Haine*> haine) {
+	//functia jador
 	int c = 1;
 	vector<Haine*>::iterator i;
 	cout << "\nAfisare haine din stoc." << endl;
@@ -56,10 +59,4 @@ void View::toateHainele(vector<Haine*> haine) {
 	else {
 		cout << "\nNu sunt haine in stoc\n";
 	}
-
-
-}
-
-void View::adaugaHaineInCos() {
-	cout << "\nIntroduceti id-ul hainei din stoc: ";
 }

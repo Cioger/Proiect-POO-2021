@@ -10,6 +10,7 @@ class Admin: public User {
 protected:
 	float plata;
 	string rol;
+	
 public:
 	//constructori
 	Admin();
@@ -26,6 +27,7 @@ public:
 	void operator=(Admin a);
 	Admin operator+=(int bt);
 	Admin operator-=(int ds);
+	Admin operator*(int btds);
 	//destructor
 	~Admin();
 };

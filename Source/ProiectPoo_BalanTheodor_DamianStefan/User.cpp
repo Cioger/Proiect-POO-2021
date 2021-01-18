@@ -2,6 +2,7 @@
 #include <string>
 #include "User.h"
 #include <vector>
+#include <fstream>
 
 using namespace std;
 
@@ -92,9 +93,8 @@ void User::setNume(string nume) {
 		this->cart.pop_back();
 	}
 	void User::splash() {
-		cout << "\n Welcome " + this->getNume() + " " + this->getPrenume()<< endl;
+		cout << "\n Welcome " + this->getNume()<< endl;
 	}
-	//string pregatireComanda();
 	//operatori
 	void User::operator=(User u) {
 		this->nume = u.nume;
@@ -104,19 +104,25 @@ void User::setNume(string nume) {
 		this->cart.assign(u.cart.begin(), u.cart.end());
 	}
 
-	string User::scoateBon() {
-		string bon;
+	void User::scoateBon() {
 		vector<Haine*>::iterator i;
+		ofstream out;
+		int m;
+		string bon;
 		int c = 1;
 		bon = "Cumparator: " + this->getNume() + 
-			" " + this->getPrenume() + 
 			"\ncu adresa: " + this->getAdresa() +
-			"\n Haine cumparate:\n";
+			"\nHaine cumparate:\n";
 		for (i = this->cart.begin(); i != this->cart.end(); i++) {
 			bon += "\n";
 			bon += (*i)->Afisare();
+			bon += "\n";
 		}
-		return bon;
+		m = bon.size();
+		out.open(this->getNume()+"bon"+".txt", ios::app);
+		out.write((char*)&bon[0], m);
+		out.close();
+		cout << "Bon emis!" << endl;
 		//vine ANAFu
 	}
 

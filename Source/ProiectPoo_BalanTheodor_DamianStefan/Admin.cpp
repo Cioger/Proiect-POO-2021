@@ -17,6 +17,7 @@ Admin::Admin(string nume, string prenume, string mail, string adresa, vector<Hai
 	}
 	else if (rol == "") {
 		throw new exception("rol invalid");
+		//un sef mai mic
 	}
 	else {
 		this->plata = plata;
@@ -50,21 +51,24 @@ void Admin::setRol(string rol) {
 	else this->rol = rol;
 	}
 	//operatori
+Admin Admin::operator-=(int ds) {
+	plata -= ds;
+	return *this;
+}
+Admin Admin::operator+=(int bt) {
+	plata += bt;
+	return *this;
+}
 void Admin::operator=(Admin a) {
 	this->User::operator=(a);
 	this->plata = a.plata;
 	this->rol = a.rol;
 	}
-Admin Admin::operator+=(int bt) {
-	plata += bt;
+Admin Admin::operator*(int btds) {
+	plata = plata * btds;
 	return *this;
 }
-Admin Admin::operator-=(int ds) {
-	plata -= ds;
-	return *this;
-}
-
-	////destructor
+	//destructor
 Admin::~Admin() {
 
 	}

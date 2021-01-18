@@ -11,5 +11,4 @@ public:
 	void haineDeAdaugat();
 	void toateHainele(vector<Haine*> haine);
 	//toate tzoalele, toate arfele
-	void adaugaHaineInCos();
 };

@@ -34,7 +34,7 @@ public:
 	void addCart(Haine* haine);
 	void afisareCart();
 	void deleteFromCart(vector<Haine*>& hainetotal, int tb);
-	string scoateBon();
+	void scoateBon();
 	//operatori
 	void operator=(User u);
 	

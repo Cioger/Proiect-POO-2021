@@ -26,12 +26,6 @@ string Controller::introducereDate() {
 	cin >> s;
 	return s;
 }
-//	void saveProduct(Haine* haine);
-//	void getProducts();
-//	void deleteAllProducts();
-//	//void addProduct(string product);
-//	void addProduct(Haine* haine);
-//	void readProduct();
 void Controller::adaugareHaineInStoc(vector<Haine*>& haineStoc, Haine* const& haine) {
 	haine->updateTot();
 	haineStoc.push_back(haine);
@@ -43,6 +37,23 @@ void Controller::eliminareHaineInStoc(vector<Haine*>& haineStoc, int i) {
 void Controller::editareHaineStoc(vector<Haine*>& haineStoc, int i) {
 	haineStoc[i - 1]->updateTot();
 	}
-//	void sendOrder(User u);
-//	void viewOrders(bool print);
-//	void printOrders(string s);
+void Controller::discount(vector<Haine*>& haineStoc, int i) {
+	float x,y;
+	cout << endl << "Alegeti Valoarea de scadere a pretului: ";
+	cin >> x;
+	y = haineStoc[i - 1]->getPret();
+	y = y - x;
+	
+	haineStoc[i - 1]->setPret(y);
+	//fmm de stl mi-ai mancat viata
+}
+void Controller::scumpire(vector<Haine*>& haineStoc, int i) {
+	float x, y;
+	cout << endl << "Alegeti Valoarea de crestere a pretului: ";
+	//of inflatia :(
+	cin >> x;
+	y = haineStoc[i - 1]->getPret();
+	y = x + y;
+	haineStoc[i - 1]->setPret(y);
+}
+

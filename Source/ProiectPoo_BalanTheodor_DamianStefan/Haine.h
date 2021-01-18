@@ -20,8 +20,6 @@ protected:
 
 public:
 	Haine();
-	
-
 	Haine(int id, string descriere, float pret, string firma, bool inStoc, Marime marime);
 	Haine(const Haine& p);
 
